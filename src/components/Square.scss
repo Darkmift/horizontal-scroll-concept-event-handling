@@ -1,0 +1,20 @@
+.square {
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    color: #000;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 250px;
+
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        cursor: -webkit-grabbing;
+        transform: scale(1.05);
+        filter: brightness(55%);
+        margin: 0 10px;
+        color: rgb(48, 38, 139);
+    }
+}
