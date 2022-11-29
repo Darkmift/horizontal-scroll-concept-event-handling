@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react';
+import { createRef, Dispatch, SetStateAction, useEffect } from 'react';
 import './Square.scss';
 
 type Props = {
@@ -8,6 +8,17 @@ type Props = {
 };
 
 function Square({ isScrolling, name, setIsScrolling }: Props) {
+    const squareRef = createRef<HTMLDivElement>();
+
+    useEffect(() => {
+        isScrolling
+            ? squareRef.current?.removeEventListener('click', clickHandler)
+            : squareRef.current?.addEventListener('click', clickHandler);
+        return () => {
+            squareRef.current?.removeEventListener('click', clickHandler);
+        };
+    }, [isScrolling, squareRef.current]);
+
     function clickHandler() {
         if (isScrolling) return;
         console.log({ target: name });
