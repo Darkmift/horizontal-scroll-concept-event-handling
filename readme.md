@@ -7,4 +7,4 @@
 
 ### Please feel very welcome to add suggestions on improving this.
 
-## [Stackblitz Playground (open console to monitor event logging)]('https://stackblitz.com/github/Darkmift/horizontal-scroll-concept-event-handling')
+## [Stackblitz Playground (open console to monitor event logging)](https://stackblitz.com/github/Darkmift/horizontal-scroll-concept-event-handling)
